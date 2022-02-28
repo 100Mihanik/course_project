@@ -19,8 +19,14 @@ function GoogAuth() {
 
 	function signIn () {
     const GoogleAuth = window.gapi.auth2.getAuthInstance()
-    GoogleAuth.signIn()
-  };
+    GoogleAuth.signIn(
+			{
+				scope: 'profile email'
+			}
+		).then(googleUser => 
+			console.log('Auth Ok', googleUser.getAuthResponse().id_token, googleUser.getBasicProfile().getEmail()),	// here i took token and email
+		() => console.log('Auth Err'))
+  }
 
 
   return (
