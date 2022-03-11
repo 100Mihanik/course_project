@@ -1,5 +1,6 @@
 import { DropdownButton, Dropdown, Image, Nav } from "react-bootstrap";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   // Google auth, doc-tion: https://developers.google.com/identity/sign-in/web/reference?hl=da
@@ -61,18 +62,19 @@ function Header() {
         </div>
       </div>
 
-      {/* NAVIGATION */}
-
+      {/* ___NAVIGATION___ */}
       <Nav justify variant="tabs" defaultActiveKey="/home">
         <Nav.Item>
-          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link to="/" as={Link} eventKey="/">
+            Home
+          </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/profile">Profile</Nav.Link>
-          {/* eventKey="link-1" */}
+          <Nav.Link to="/profile" as={Link} eventKey="/profile">
+            Profile
+          </Nav.Link>
         </Nav.Item>
       </Nav>
-      <div>Низ хеадера</div>
     </header>
   );
 }
