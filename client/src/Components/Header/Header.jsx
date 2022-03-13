@@ -30,7 +30,7 @@ function Header() {
       </div>
 
       {/* ___NAVIGATION___ */}
-      <Nav justify variant="tabs" defaultActiveKey="/home">
+      <Nav justify variant="tabs" defaultActiveKey="/">
         <Nav.Item>
           <Nav.Link to="/" as={Link} eventKey="/">
             Home

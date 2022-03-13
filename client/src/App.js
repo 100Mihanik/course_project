@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 import "./App.css";
 import Header from "./components/Header/Header";
-import Profile from "./components/Profile";
+import Profile from "./components/Profile/Profile";
 import Home from "./components/Home";
 
 function App() {
