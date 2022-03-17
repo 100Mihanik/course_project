@@ -1,0 +1,150 @@
+* {
+  line-height: 110%;
+}
+.revier {
+  border: solid black 2px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.headInfo {
+  display: flex;
+  background-color: aquamarine;
+  border-bottom: solid black 2px;
+}
+/* group */
+.group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 8px 10px 8px 8px;
+  min-width: 62px;
+  background-color: rgb(110, 226, 139);
+}
+.group:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(39, 39, 39);
+  width: 2px;
+  height: 100%;
+  right: 0;
+}
+/* headRight */
+.headRight {
+  display: flex;
+  padding: 4px 0;
+  width: 100%;
+  justify-content: space-between;
+}
+.title {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+.ratings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  padding: 0 8px;
+  margin-left: auto;
+}
+.rating {
+  min-width: 50px;
+}
+.ratingName {
+  display: flex;
+  justify-content: center;
+}
+.ratingValue {
+  display: flex;
+  justify-content: center;
+}
+/* ---SECOND-INFO--- */
+.secondInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+}
+.right_bottom_info {
+  display: flex;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+}
+.buttonBrowse {
+  display: block;
+  position: relative;
+  height: 35px;
+  margin: 0 8px;
+}
+.betweenButton {
+  background-color: black;
+  width: 2px;
+  height: 35px;
+  margin: 0 8px;
+}
+.buttonDel {
+  position: relative;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  height: 100%;
+}
+.delIcon:before {
+  display: block;
+  font-size: 20px;
+}
+.delIcon:hover:before {
+  text-shadow: 1px 1px 0.5px rgb(243, 72, 72);
+}
+
+.rightBottomInfo {
+  display: flex;
+  align-items: center;
+}
+.tags {
+  display: flex;
+  align-items: center;
+}
+.lekeGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 3px;
+  margin: 0 5px;
+}
+.likeIcon {
+  display: block;
+  color: gray;
+  margin-right: 5px;
+}
+
+@media (max-width: 450px) {
+  .headRight {
+    display: block;
+  }
+  .ratings {
+    justify-content: end;
+    padding: 2px 8px 0 8px;
+  }
+  .rating {
+    display: flex;
+  }
+  .ratingName {
+    padding-right: 5px;
+  }
+	.buttonBrowse{
+		margin: 0;
+	}
+	.betweenButton {
+		margin-right: 0;
+	}
+	.lekeGroup {
+		margin-right: 0;
+	}
+}

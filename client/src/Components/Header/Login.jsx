@@ -4,17 +4,19 @@ import { DropdownButton, Dropdown } from "react-bootstrap";
 function Login() {
   // Google auth, doc-tion: https://developers.google.com/identity/sign-in/web/reference?hl=da
   useEffect(() => {
-    window.gapi.load("auth2", function () {
-      window.gapi.auth2
-        .init({
-          client_id:
-            "45049386046-b4hms2juhih55tb8frnfpdj69k4jb1ma.apps.googleusercontent.com",
-        })
-        .then(
-          () => console.log("library Google Ok"),
-          () => console.log("library Google ERR")
-        );
-    });
+    if (window.gapi !== undefined) {
+      window.gapi.load("auth2", function () {
+        window.gapi.auth2
+          .init({
+            client_id:
+              "45049386046-b4hms2juhih55tb8frnfpdj69k4jb1ma.apps.googleusercontent.com",
+          })
+          .then(
+            () => console.log("library Google Ok"),
+            () => console.log("library Google ERR")
+          );
+      });
+    } else {alert('library Google login ERR')}
   });
   function signInGoog() {
     const GoogleAuth = window.gapi.auth2.getAuthInstance();
