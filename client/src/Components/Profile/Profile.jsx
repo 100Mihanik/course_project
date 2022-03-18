@@ -7,10 +7,10 @@ const Profile = (props) => {
         id: 1,
         group: "Movie",
         title:
-          "Title ,kf,kf,kf,fkf,k заголовокttttttt tttttttt tjjjjjjjjjjj тайтл1",
+          "Title ,kf,kf,kf,fkf,k заголовокttttttt hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhxx vvvvvvvvvvvvvvvvvv tttttttt tjjjjjjjjjjj тайтл1",
         authRating: 4,
         userRating: 3,
-        tags: ["#review", "#tag", "#superReview", "#superReview2"],
+        tags: ["#review", "#tag", "#superReview", "#superkkkkkkk________________________________________khhhReview2"],
         reviewsIn: {
           images: [],
           text: "эТО БОЛЬШОЙ ОБЗОр много текста",
@@ -70,7 +70,7 @@ const Profile = (props) => {
         userRating={r.userRating}
         likes={r.reviewsIn.likesCount}
         tags={r.tags}
-        delReviewDispatch={delReviewDispatch} // here sent f(x) through props. Может лучше оставить её здесь, а вызывать там..
+        delReviewDispatch={delReviewDispatch} // here sent f(x) through props..
       />
     </div>
   ));
