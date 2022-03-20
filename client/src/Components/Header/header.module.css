@@ -1,0 +1,61 @@
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	position: relative;
+  margin: 0 12px;
+  width: 26px;
+  height: 40px;
+}
+.check_input {
+	overflow: hidden; 
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+	position: absolute;
+	z-index: -1;
+	top: 10px;
+	left: 10px;
+	appearance: none;
+  -webkit-appearance: none; /* now :focus will work. With display:none :focus dosen't work */
+  -moz-appearance: none;
+}
+.check_box {
+  position: relative;
+  border-radius: 100px;
+  width: 24px;
+  height: 40px;
+  background-color: gray;
+}
+.check_box:after {
+	content: ' ☾☼';
+	font-size: 15px;
+	position: absolute;
+	line-height: 17px;
+	word-wrap: break-word;
+	width: 10px;
+	height: 40px;
+	top: 3px;
+	left: 5px;
+	color: #fff;
+}
+.check_box:before {
+	content: '';
+	position: absolute;
+	border-radius: 40px;
+	width: 18px;
+	height: 18px;
+	top: 3px;
+	left: 3px;
+	background-color: #fff;
+}
+.check_input:checked ~ .check_box:before {
+  top: auto;
+	bottom: 3px;
+}
+.check_input:checked ~ .check_box:after {
+  left: 6px;
+}
+.check_input:focus ~ .check_box {
+  background-color: rgb(110, 103, 103);
+}

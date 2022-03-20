@@ -2,6 +2,7 @@ import { Image, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import Login from "./Login";
+import h from "./header.module.css";
 
 function Header() {
   return (
@@ -17,15 +18,11 @@ function Header() {
           <div>Username</div>
         </div>
         <div className="d-flex align-items-center">
-          <div>
-            <Login/>
-          </div>
-          <div>
-            <span className="toggle mx-2">
-              <input id="checkbox" className="checkbox" type="checkbox" />
-              <label htmlFor="checkbox" />
-            </span>
-          </div>
+          <label className={h.check}>
+            <input type="checkbox" className={h.check_input} />
+            <div className={h.check_box}></div>
+          </label>
+          <Login />
         </div>
       </div>
 
