@@ -1,14 +1,14 @@
 import { Image, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Login from "./Login";
 import h from "./header.module.css";
 
 const changeThemeLocalStorage = () => {
   if (window.localStorage.getItem("theme") === "dark") {
-    window.localStorage.setItem("theme", "light")
+    window.localStorage.setItem("theme", "light");
   } else {
-    window.localStorage.setItem("theme", "dark")
+    window.localStorage.setItem("theme", "dark");
   }
   window.location.reload();
 };
@@ -31,7 +31,7 @@ function Header() {
             <input
               className={h.check_input}
               type="checkbox"
-							checked={window.localStorage.getItem("theme") !== "dark"}
+              checked={window.localStorage.getItem("theme") !== "dark"}
               onChange={changeThemeLocalStorage}
             />
             <div className={h.check_box}></div>
@@ -41,14 +41,14 @@ function Header() {
       </div>
 
       {/* ___NAVIGATION___ */}
-      <Nav justify variant="tabs" defaultActiveKey="/">
+      <Nav justify variant="tabs">
         <Nav.Item>
-          <Nav.Link to="/" as={Link} eventKey="/">
+          <Nav.Link exact="false" to="/home" as={NavLink} eventKey="/home">
             Home
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link to="/profile" as={Link} eventKey="/profile">
+          <Nav.Link to="/profile" as={NavLink} eventKey="/profile">
             Profile
           </Nav.Link>
         </Nav.Item>

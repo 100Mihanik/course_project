@@ -11,7 +11,7 @@ function App() {
       <Container fluid='xxl'>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/profile" element={<ProfileContainer />} />
         </Routes>
       </Container>

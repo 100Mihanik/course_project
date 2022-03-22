@@ -4,7 +4,6 @@ import darkstyles from "./darkstyles";
 function StyleWrapper (props) {
   useEffect(() => {
     if (window["localStorage"] !== null) {
-      console.log(window.localStorage.getItem("theme") === "dark");
       window.localStorage.getItem("theme") === "dark"
         ? switchDarkTheme()
         : window.localStorage.setItem("theme", "light");
