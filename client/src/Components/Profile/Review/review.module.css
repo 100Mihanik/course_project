@@ -5,12 +5,12 @@
   border: solid black 2px;
   border-radius: 10px;
   margin: 20px 0;
+	overflow: hidden;
 }
 .headInfo {
   display: flex;
   background-color: aquamarine;
   border-bottom: solid black 2px;
-  border-radius: 10px 10px 0 0;
 }
 /* group */
 .group {
@@ -21,7 +21,6 @@
   padding: 8px 10px 8px 8px;
   min-width: 62px;
   background-color: rgb(110, 226, 139);
-  border-radius: 10px 0 0 0;
 }
 .group:after {
   content: "";
