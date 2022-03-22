@@ -4,6 +4,15 @@ import { Link } from "react-router-dom";
 import Login from "./Login";
 import h from "./header.module.css";
 
+const changeThemeLocalStorage = () => {
+  if (window.localStorage.getItem("theme") === "dark") {
+    window.localStorage.setItem("theme", "light")
+  } else {
+    window.localStorage.setItem("theme", "dark")
+  }
+  window.location.reload();
+};
+
 function Header() {
   return (
     <header>
@@ -19,7 +28,12 @@ function Header() {
         </div>
         <div className="d-flex align-items-center">
           <label className={h.check}>
-            <input type="checkbox" className={h.check_input} />
+            <input
+              className={h.check_input}
+              type="checkbox"
+							checked={window.localStorage.getItem("theme") !== "dark"}
+              onChange={changeThemeLocalStorage}
+            />
             <div className={h.check_box}></div>
           </label>
           <Login />
