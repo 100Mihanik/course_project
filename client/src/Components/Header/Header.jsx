@@ -43,7 +43,7 @@ function Header() {
       {/* ___NAVIGATION___ */}
       <Nav justify variant="tabs">
         <Nav.Item>
-          <Nav.Link exact="false" to="/home" as={NavLink} eventKey="/home">
+          <Nav.Link exact="false" to="/" as={NavLink} eventKey="/">
             Home
           </Nav.Link>
         </Nav.Item>
